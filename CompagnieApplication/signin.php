@@ -52,6 +52,7 @@ if (isset($_POST['submit'])) {
     if ($erreur) {
 
         echo "<center><p><b>ERROR:' . $message' </b></p></center>";
+        echo "<center><p><b>ERROR:' . $message' </b></p></center>";
     }
 }
 echo $_SESSION["idUser"];
@@ -130,7 +131,7 @@ echo $_SESSION["idUser"];
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <h1 class="my-0 site-logo"><a href="index.html">AIRIO</a></h1>
+                        <h1 class="my-0 site-logo"><a href="index.php">AIRIO</a></h1>
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">

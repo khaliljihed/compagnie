@@ -32,6 +32,7 @@
 	    if (!$res=$mysqli->multi_query("delete from membre_equipage where numero_SS='$numero_ss_membre'")) 
 	    {
 		    echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
+            echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
 	    }
 	    else{
 		    header('location: http://localhost:8001/adminView.php');
@@ -44,6 +45,7 @@
 	    if (!$res=$mysqli->multi_query("delete from vol_aeroport where numero_vol='$numero_vol_liaison'")) 
 	    {
 		    echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
+            echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
 	    }
 	    else{
 		    header('location: http://localhost:8001/adminView.php');
@@ -120,7 +122,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <h1 class="my-0 site-logo"><a href="index.html">AIRIO</a></h1>
+                        <h1 class="my-0 site-logo"><a href="index.php">AIRIO</a></h1>
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">

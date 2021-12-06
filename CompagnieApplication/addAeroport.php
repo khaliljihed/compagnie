@@ -7,6 +7,7 @@ if (isset($_POST['submit'])) {
         $mysqli = new mysqli("db", "root", "root", "db");
         if (!$res = $mysqli->multi_query("insert into aeroport values('$nom','$code','$ville')")) {
             echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
+            echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
         } else {
             header('location: http://localhost:8001/adminView.php');
         }
@@ -87,7 +88,7 @@ if (isset($_POST['submit'])) {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <h1 class="my-0 site-logo"><a href="index.html">AIRIO</a></h1>
+                        <h1 class="my-0 site-logo"><a href="index.php">AIRIO</a></h1>
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">

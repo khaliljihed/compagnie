@@ -9,9 +9,10 @@ if (isset($_POST['submit'])) {
         $numSS = $_POST['numSS'];
         $numLi = $_POST['numLi'];
         $mysqli = new mysqli("db", "root", "root", "db");
-        if (!$res = $mysqli->multi_query("insert into pilote values('$numSS', '$numLi', '$heureVol', '$prenom', '$nom', '$adresse', '$salaire')")) {
 
-            echo "<center><p><b>ERROR:' . $mysqli->error' </b></p></center>";
+        if (!$res = $mysqli->multi_query("insert into pilote(numero_ss, heures_vol, prenom, nom, adresse, salaire ) values('$numSS', '$heureVol', '$prenom', '$nom', '$adresse', '$salaire')")) {
+            echo "<center><p ><b>ERROR:' . $mysqli->error' </b></p></center>";
+            echo "<center><p class='alert'><b>ERROR:' . $mysqli->error' </b></p></center>";
         } else {
             header('location: http://localhost:8001/adminView.php');
         }
@@ -94,7 +95,7 @@ if (isset($_POST['submit'])) {
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <h1 class="my-0 site-logo"><a href="index.html">AIRIO</a></h1>
+                        <h1 class="my-0 site-logo"><a href="index.php">AIRIO</a></h1>
                     </div>
                     <div class="col-10">
                         <nav class="site-navigation text-right" role="navigation">
